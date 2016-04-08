@@ -1,0 +1,22 @@
+<div ng-controller="TestController as test">
+    <table>
+        <thead>
+        <tr>
+            <th colspan="4">
+                Drivers Championship Standings
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="driver in test.drivers">
+            <td>{{ $index + 1 }}</td>
+            <td>
+                <!--<img src="img/flags/{{ driver.nationality }}.png" alt="">-->
+                {{ driver.Driver.givenName }}&nbsp;{{ driver.Driver.familyName }}
+            </td>
+            <td>{{ driver.Constructors[0].name }}</td>
+            <td>{{ driver.points }}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
